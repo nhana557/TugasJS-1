@@ -14,7 +14,7 @@ function nilaiAverage(mtk, bahasaIndonesia, bahasaInggris, ipa){
         if(mtk < 0 || bahasaIndonesia < 0 || bahasaInggris < 0 || ipa < 0) throw 'nilai tidak boleh negatif'
         if(mtk > 100 || bahasaIndonesia > 100 || bahasaInggris > 100 || ipa > 100) throw 'nilai tidak boleh lebih dari 100'
         if(isNaN(mtk) ||isNaN(bahasaIndonesia|| isNaN(bahasaInggris) || isNaN(ipa))) throw "jangan masukan selain angka";
-
+        if(typeof(mtk) !== typeof(Number(mtk)) || typeof(bahasaIndonesia) !== typeof(Number(bahasaIndonesia)) || typeof(bahasaInggris) !== typeof(bahasaInggris) || typeof(ipa) !== typeof(Number(ipa))) throw 'nilai yang anda masukan string'
 
         let average = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
         if(average >= 90 && average <= 100){
@@ -37,49 +37,4 @@ function nilaiAverage(mtk, bahasaIndonesia, bahasaInggris, ipa){
         console.log(err)
     }
 }
-nilaiAverage('', 100, 100, 100)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function matapelajaran(mtk, bahasaIndonesia, bahasaInggris, ipa){
-           
-//     if(mtk == undefined || bahasaIndonesia == undefined || bahasaInggris == undefined || ipa == undefined){
-//         console.log("lengkapi nilai")
-//     }else if(typeof(mtk) !== typeof(Number(mtk)) || typeof(bahasaIndonesia) !== typeof(Number(bahasaIndonesia)) || typeof(bahasaInggris) !== typeof(bahasaInggris) || typeof(ipa) !== typeof(Number(ipa))){
-//         console.log("jangan memasukan selain angka")
-//     }
-//     else {
-//         let average = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
-//         console.log(`Rata-rata: ${average}`)
-//         if(average >= 90 && average <= 100){
-//             console.log(`Grade: A`)
-//         }else if(average >= 80 && average <= 89){
-//             console.log(`Grade: B`)
-//         }else if(average >= 70 && average <= 79){
-//             console.log(`Grade: C`)
-//         }else if(average >= 60 && average <= 69){
-//             console.log(`Grade: D`)
-//         }else{
-//             console.log(`Grade: E`)
-//         }
-//     }
-// }
-// matapelajaran(100, 80, 70, 0)
-
-
-
+nilaiAverage('0', 100, 100, 100)

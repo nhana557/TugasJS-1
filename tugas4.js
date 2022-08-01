@@ -28,5 +28,10 @@ console.log(data1)
 
 // b. Ambilah data “street dan city” tersebut menggunakan destructuring
 const {street, city} = data.address
+
+// tidak menggunakan destructuring
+// const street = data.address.street;
+// const city = data.address.city
+
 console.log(street);
 console.log(city)
